@@ -45,6 +45,27 @@ except:
 else:
     print('host válido')
 
+# criando funções para testar a conectvidade dependendo do tipo de protocolo
+def tcp():
+    sock = socket.socket(family=socket.AF_INET, type=socket.SOCK_STREAM)
+    sock.settimeout(1)
+    if sock.connect_ex((iphost, port)) == 0:
+        print(f'porta {port}: protocolo: TCP - {porta[2]}/ status: \033[4;30;42maberta\033[m')
+    else:
+        print(f'porta {port}: protocolo: TCP - {porta[2]}/ status: \033[4;30;45mfechada\033[m')
+def udp():
+    sock = socket.socket(family=socket.AF_INET, type=socket.SOCK_DGRAM)
+    sock.settimeout(1)
+    if sock.connect_ex((iphost, port)) == 0:
+        print(f'porta {port}: protocolo: UDP - {porta[2]}/ status: \033[4;30;42maberta\033[m')
+    else:
+        print(f'porta {port}: protocolo: UDP - {porta[2]}/ status: \033[4;30;45mfechada\033[m')
 
 for porta in novas_linhas:
     port = porta[0]
+    try:
+        if port in TCPUDP: tcp(); udp()
+        elif port in TCP: tcp()       
+        elif port in UDP: udp()
+    except Exception:
+        print(f'erro com a verificação da porta {port}: {Exception}')
