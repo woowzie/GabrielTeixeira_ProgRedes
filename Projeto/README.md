@@ -25,6 +25,6 @@ PROJETO DESIGNADO A MATÉRIA DE PROGRAMAÇÃO PARA REDES - IFRN (CRIANDO UMA APL
      '/info-p'     --> mostra lista dos programas instalados no servidor, funciona em clientes sendo executados tanto no windowns quanto no linux.
      '/info-h'     --> mostra as informações do hardware de onde está sendo executado.
 
-
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 ~ Gabriel de Sousa Teixeira ^^ ~
