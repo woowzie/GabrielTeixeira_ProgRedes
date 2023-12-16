@@ -37,7 +37,7 @@ def verificar(mensagem, chat_id, url_base):
         elif digitado == '/start': return primeira_msg
         else: return 'Oops . . . !   o_O\n\n O comando digitado não existe ou não está correto, digite "/help" caso deseje ver a tabela com os comandos disponíveis novamente.'
     except KeyError:
-        return 'Infelizmente eu não consigo interpretar esse tipo de mídia   :(\n por favor insira um comando válido ou digite "/help" para visualizar a tabela com os comandos disponíveis'
+        return 'Infelizmente eu não consigo interpretar esse tipo de mídia   :(\npor favor insira um comando válido ou digite "/help" para visualizar a tabela com os comandos disponíveis'
 
 ####################################################################################################################################################################################################################
 
