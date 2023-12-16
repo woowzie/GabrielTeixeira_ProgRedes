@@ -43,14 +43,14 @@ def verificar(mensagem, chat_id, url_base):
 
 # criar função com objetivo de obter as mensagens enviadas ao bot
 
-def obter_msg(update_id, url_base):
+def obtendo_mensagens(update_id, url_base):
     link = f'{url_base}getUpdates?timeout=100'
     if update_id:
         link = f'{link}&offset={update_id + 1}'   
     resultado = requests.get(link)
-    # data = json.loads(resultado)
-    # return data.get(????)
-    #ver json melhor dps
+    try:
+        data = json.loads(resultado.content); return data.get('result', [])
+    except json.JSONDecodeError: return []
 
 ##################################################################################################################################################################################################################
               
