@@ -23,7 +23,7 @@ def retornar(comando):
 
 # criar função para verificar o texto que foi digitado e dar um retorno correspondente na def retornar()
 def verificar(mensagem, chat_id, url_base):
-    primeira_msg = ('Olá, seja bem vindo a Dani bot ^^ estou aqui para ajudar!\n\n'
+    primeira_msg = ('Olá, seja bem vindo a Hyein bot ^^ estou aqui para ajudar!\n\n'
                             'Estou disponível para lhe auxiliar com os seguintes comandos:\n\n'
                             '/info-h --> informações de hardware\n'
                             '/info-p --> lista programas instalados\n'
