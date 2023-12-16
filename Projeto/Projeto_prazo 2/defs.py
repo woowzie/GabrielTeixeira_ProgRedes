@@ -23,7 +23,7 @@ def retornar(comando):
 
 # criar função para verificar o texto que foi digitado e dar um retorno correspondente na def retornar()
 def verificar(mensagem, chat_id, url_base):
-    primeira_msg = ('Olá, seja bem vindo a Hyein bot ^^ estou aqui para ajudar!\n\n'
+    primeira_msg = ('Olá, seja bem vindo a Dani bot ^^ estou aqui para ajudar!\n\n'
                             'Estou disponível para lhe auxiliar com os seguintes comandos:\n\n'
                             '/info-h --> informações de hardware\n'
                             '/info-p --> lista programas instalados\n'
@@ -31,8 +31,8 @@ def verificar(mensagem, chat_id, url_base):
                             '/historic --> exibir histórico de navegação\n'
                             '/listclient --> listagem e informação dos clientes logados')
     try:
-        digitado = mensagem['message']['text']
-        if digitado.lower() in ['/info-p', '/info-u', '/historic', '/help', 'listclient', '/info-h']:
+        digitado = mensagem['message']['text']; digitado = digitado.lower()
+        if digitado in ['/info-p', '/info-u', '/historic', '/help', 'listclient', '/info-h']:
             return retornar(digitado)
         elif digitado == '/start': return primeira_msg
         else: return 'Oops . . . !   o_O\n\n O comando digitado não existe ou não está correto, digite "/help" caso deseje ver a tabela com os comandos disponíveis novamente.'
@@ -56,7 +56,7 @@ def obtendo_mensagens(update_id, url_base):
               
 # criar funçãp com objetivo de responder as mensagens recebidas 
 
-def responder_msg(resposta,chat_id,url_base):
+def respondendo(resposta,chat_id,url_base):
      link_envio = f'{url_base}sendMessage?chat_id={chat_id}&text={resposta}'
      requests.get(link_envio)
 
