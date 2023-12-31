@@ -1,11 +1,12 @@
-PROJETO DESIGNADO A MATÉRIA DE PROGRAMAÇÃO PARA REDES - IFRN (CRIANDO UMA APLICAÇÃO CLIENTE/SERVIDOR)
+# PROJETO DESIGNADO A MATÉRIA DE PROGRAMAÇÃO PARA REDES - IFRN (CRIANDO UMA APLICAÇÃO CLIENTE/SERVIDOR)
 
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## TIPO DE SOCKET USADO:
+  > Utiliza sockets TCP na comunicação CLIENTE - SERVIDOR.   
+  > Por serem orientados a conexão e garantirem a ordem de entrega dos pacotes, acredito que sockets do tipo TCP se adequem bem no projeto em questão, já que irá ocorrer uma
+comunicação direta e a intenção é que a integridade constante dos dados seja mantida para um bom funcionamento. 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-* TIPOS DE SOCKET:
-  > Utiliza sockets TCP na comunicação cliente - servidor, por serem orientados a conexão e garantirem a ordem dos pacotes, serem considerados confiáveis e sem perda.
-
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-* SOBRE O CLIENTE:
+### SOBRE O CLIENTE:
   > O projeto tem como objetivo criar um programa, que por meio de sockets TCP, estabeleça uma conexão cliente -> <- servidor.
   
   > Uma vez executado o programa, o cliente fornece o nome do usuário logado, o nome do host e e seu ip, e logo em seguida é executado em segundo plano deixando o terminal livre para o usuário.
@@ -17,7 +18,7 @@ PROJETO DESIGNADO A MATÉRIA DE PROGRAMAÇÃO PARA REDES - IFRN (CRIANDO UMA APL
   > Enquanto estiver na memória o agente irá responder a requisições oriundas do servidor.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-* SOBRE O SERVIDOR:
+### SOBRE O SERVIDOR:
   > O servidor permite conexões simultâneas de vários clientes usando um socket TCP, gerenciando as conexões ativas e verificando quando um cliente fica offline.
   
   > Assim como o cliente, o servidor possui uma opção para ser removido da memória se desejado.
@@ -28,15 +29,15 @@ PROJETO DESIGNADO A MATÉRIA DE PROGRAMAÇÃO PARA REDES - IFRN (CRIANDO UMA APL
   
   > O servidor executará comandos por meio de um bot no Telegram, sendo eles:
   
-  		'/listclient' --> lista os agentes online e retorna informações como IP, HOSTNAME, usuário logado e tempo que o mesmo está online.
+  		!listclient   --> lista os agentes online e retorna informações como IP, HOSTNAME, usuário logado e tempo que o mesmo está online.
 
-  		'/historic'   --> mostra o histórico de navegação em diferentes navegadores, funciona em clientes sendo executados tanto no windowns quanto no linux.
+  		!history      --> mostra o histórico de navegação em diferentes navegadores, funciona em clientes sendo executados tanto no windowns quanto no linux.
   
-  		'/info-u'     --> mostra informações detalhadas do usuário logado (UID, grupo principal/secundários, shell padrão, etc.)
+  		!userinfo     --> mostra informações detalhadas do usuário logado (UID, grupo principal/secundários, shell padrão, etc.)
   
-  		'/info-p'     --> mostra lista dos programas instalados no servidor, funciona em clientes sendo executados tanto no windowns quanto no linux.
+  		!listapp      --> mostra lista dos programas instalados no servidor, funciona em clientes sendo executados tanto no windowns quanto no linux.
   
-  		'/info-h'     --> mostra as informações do hardware de onde está sendo executado.
+  		!hardinfo     --> mostra as informações do hardware de onde está sendo executado.
 
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 
